@@ -4,7 +4,11 @@ from datetime import date,timedelta
 from dotenv import load_dotenv
 from twilio.rest import Client
 
-load_dotenv()
+ENVIRONMENT = "TESTING"
+if ENVIRONMENT == "TESTING":
+    load_dotenv(".env.testing")
+else:
+    load_dotenv(".env.production")
 
 STOCK = "TSLA"
 COMPANY_NAME = "Tesla Inc"
