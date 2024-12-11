@@ -1,0 +1,1 @@
+A program that uses the Alphavantage,News and Twilio APIs to send information about rises and falls in Tesla's stock price together with the top three headlines regarding Tesla to my phone. Made for the 100 days of code python Udemy course.
