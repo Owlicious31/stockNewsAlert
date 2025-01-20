@@ -79,7 +79,10 @@ def get_news()->tuple[list,list]:
         try:
             description.replace(description,description[:description.index("…")])
         except ValueError:
-            description.replace(description, description[:description.index("...")])
+            try:
+                description.replace(description, description[:description.index("...")])
+            except ValueError:
+                continue
 
     return headlines,descriptions
 
